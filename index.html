@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NIKHEEL | portfolio</title>
+
+	<!-- CDN LINKS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+	
+	<!-- ICONS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+	<!-- GOOGLE FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">	
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    
+    <style type="text/css">
+      
+      #hi-box{
+  background: #4fdcc5;
+  width: 100px;
+  height: 40px;
+  border-radius: 30px 30px 30px 5px;
+  /*margin-top: 150px;
+*/}
+#hi-box-nme{
+  color: white;
+  padding-top: 8px;
+  text-align: center;
+
+}
+#mail{
+  color: black;
+}
+#hrf{
+  color: black;
+}
+#hrf:hover{
+  text-decoration: none;
+  color:  #4fdcc5;
+}
+#cnt li{
+  float: left;
+  padding: 10px;
+  font-size: 20px;
+}
+.details{
+  margin-top: 30px;
+}
+#name{
+  font-family: 'Lobster', cursive;
+  font-size: 3vw!important;
+}
+#tag{
+  font-family: 'Cinzel', serif;
+}
+#box1{
+  border: 2px solid black;
+  border-radius: 8px;
+  border-color: #50D7BF ;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  transition: 0.1s;
+
+}
+#box2{
+  border: 2px solid black;
+  border-radius: 8px;
+  border-color: #50D7BF ;
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  transition: 0.1s;
+}
+#box3{
+  border: 2px solid black;
+  border-radius: 8px;
+  border-color: #50D7BF ;
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  transition: 0.1s;
+}
+#box3:hover{
+  background: #50D7BF;
+  font-weight: bold;
+}
+#box2:hover{
+  background: #50D7BF;
+  font-weight: bold;
+}
+#box1:hover{
+  background: #50D7BF;
+  font-weight: bold;
+
+}
+#my-skill{
+  float: left; 
+  border: 1px solid  #50D7BF; 
+  border-radius: 8px; 
+  margin-left: 20px;
+  padding: 7px;
+
+}
+#crd-shd{
+  
+}
+#crd-shd:hover{
+
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px -3px gray; 
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+#edu-hed{
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: bold;
+}
+
+
+
+
+@media only screen and (max-width: 390px){
+
+  #hi-box{
+    margin-top: -100px;
+  }
+
+  #name{
+    font-size: 30px!important;
+  }
+
+  #cnt{
+    margin-left: -48px;
+  }
+
+  #abt{
+    margin-top: 20px;
+  }
+
+  #my-skill{
+  
+  border: 1px solid  #50D7BF; 
+  border-radius: 8px; 
+  margin-left: 1px;
+  padding: 4px;
+    }
+
+    #wht-i-do{
+      text-align: left;
+    }
+
+    #crd-shd{
+      width: 23em;
+      margin-left: 10px;
+    }
+    #icon{
+      font-size: 30px!important;
+    }
+
+    #tech{
+      text-align: left!important;
+      margin-left: -20px;
+    }
+    #pro-bar{
+      width: 340px;
+
+    }
+    #projects{
+      width: 22.5rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainbar">
+  <h2 class="navbar-nav mx-auto" href="#" style="font-family: 'Grape Nuts', cursive; font-weight: bold;" id="label">Portfolio </h2>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item  ">
+        <a class="nav-link" href="#mh-home" style="font-family: 'Petit Formal Script', cursive;">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#mh-about"style="font-family: 'Petit Formal Script', cursive;">About</a>
+      </li>
+     <li class="nav-item">
+        <a class="nav-link" href="#sks"style="font-family: 'Petit Formal Script', cursive;">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#projects"style="font-family: 'Petit Formal Script', cursive;">Projects</a>
+      </li>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<!-- =======
+     HOME
+     ======= -->
+
+<section class="mh-home" id="mh-home" style="margin-top: 150px;">
+    <div class="home-ovimg">
+        <div class="container">
+            <div class="row xs-column-reverse section-separator vertical-middle-content home-padding">
+                <div class="col-sm-6">
+                    <div class="mh-header-info">
+                        <div class="mh-promo wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+                            <span><div  id="hi-box"><p id="hi-box-nme">Hello i'm</p></div></span>
+                        </div>
+                        
+                        <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" id="name">Nikheel Uttamrao Talwade</h2>
+                        <h4 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s" id="tag">Java Developer</h4>
+                        
+                        <div class="details">
+                      
+                            <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s" style="list-style-image: url(img/envelope-fill.svg);"><a href="mailto:" id="hrf"> nikheeltalwade@gmail.com</a></li>
+
+                            <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s" style="list-style-image: url(img/telephone-fill.svg);">+91 9591241878</li>
+
+                            <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s" style="list-style-image: url(img/geo-alt-fill.svg);">Secunderabad,Hyderabad, TS</li>
+                            
+                       </div>
+                        <div><p></p></div>
+                        <ul class="social-icon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s" style="list-style: none; " id="cnt">
+                            <li><a href="#" style="color: black;"><i class="bi bi-facebook"></i></a></li>
+                            <li><a href="#" style="color: black;"><i class="bi bi-twitter"></i></a></li>
+                            <li><a href="#" style="color: black;"><i class="bi bi-github"></i></a></li>
+                            <li><a href="#" style="color: black;"><i class="bi bi-dribbble"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+                        <div class="img-border">
+                            <img src="img/pic.jpg" alt="" class="img-fluid" width="auto" height="400px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>  
+
+
+
+
+
+<!-- ===========
+     ABOUT ME 
+     =========== -->
+
+<section class="mh-about my-5" id="mh-about">
+    <div class="container">
+        <div class="row section-separator">
+            <div class="col-sm-12 col-md-6">
+                <div class="mh-about-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
+                    <img src="img/pic-do.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="mh-about-inner">
+                    <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s" id="abt">About Me</h2>
+                    <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="font-family: 'Montserrat', sans-serif;">Hello, I’m a Nikheel, Java-developer . I have rich experience in web site design & building and customization. Also I am good at</p>
+                    <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                       
+                        <ul style="list-style: none;  display: inline;" >
+                            <li id="my-skill"><span>Java</span></li>
+                            <li id="my-skill"><span>HTML</span></li>
+                            <li id="my-skill"><span>CSS</span></li>
+                            <li id="my-skill"><span>Bootstrap</span></li>
+                            <li id="my-skill"><span>Javascript</span></li>
+                            <li id="my-skill"><span>DATABASE(mySql)</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ===========
+    WHAT I DO
+     =========== -->
+
+<section class="mh-service">
+    <div class="container">
+        <div class="row section-separator">
+            <div class="col-sm-12 text-center section-title wow fadeInUp my-5" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                <h2 style="font-family: 'M PLUS Rounded 1c', sans-serif;" id="wht-i-do">What I do</h2>
+            </div>
+
+
+    <div class="card-deck">
+      
+      <div class="card" id="crd-shd">  
+       <div class="card-body" >
+            <i class="bi bi-boombox-fill" style="color: #a587fa; font-size: 3vw;" id="icon"></i>
+          <h5 class="card-title" style="font-family: 'M PLUS Rounded 1c', sans-serif;">Web Development </h5>
+          <p class="card-text" style="font-family:'Montserrat Alternates', sans-serif;">It is the work involved in developing a website for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web applications.</p>
+        </div>
+      </div>
+
+      <div class="card" id="crd-shd"> 
+        <div class="card-body">
+            <i class="bi bi-brush" style="color: #f0856c; font-size: 3vw;" id="icon"></i>
+          <h5 class="card-title" style="font-family: 'M PLUS Rounded 1c', sans-serif;">Graphic Design</h5>
+          <p class="card-text"  style="font-family:'Montserrat Alternates', sans-serif;">Graphic design consists in projecting visual communications intended to transmit specific messages to social groups, with specific objectives.</p>
+        </div>
+      </div>
+
+      <div class="card" id="crd-shd"> 
+        <div class="card-body" >
+            <i class="bi bi-search-heart-fill" style="color: #3da0e5; font-size: 3vw;" id="icon"></i>
+          <h5 class="card-title" style="font-family: 'M PLUS Rounded 1c', sans-serif;">Data Analytics</h5>
+          <p class="card-text" style="font-family:'Montserrat Alternates', sans-serif;">Data analysis is a process of inspecting, cleansing, transforming, and modelling data with the goal of discovering useful information, informing conclusions, and supporting decision-making. </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>  
+
+
+
+<!-- =========
+      TECHNICAL SKILLS
+     ========= -->
+
+
+
+
+<div class="container" id="sks"> 
+  <div class="row">
+
+    <div class="col-5 my-5">
+       <div class="card" style="width: 30rem; border-color: white">
+        <div class="card-body">
+          <h3 class="card-title" style="font-family:'Montserrat Alternates', sans-serif; font-weight: bold; text-align: center;" id="tech">Technical Skills</h3><div><p> </p></div>
+          <p style="font-size: 15px">JavaScript</p>
+            <div class="progress" style="height: 5px" id="pro-bar">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+            </div>
+            <p style="font-size: 15px">DATABASE</p>
+            <div class="progress" style="height: 5px" id="pro-bar">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 79%;"></div>
+            </div> 
+            <p style="font-size: 15px">java</p>
+            <div class="progress" style="height: 5px" id="pro-bar">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
+            </div> 
+            <p style="font-size: 15px">Html</p>
+            <div class="progress" style="height: 5px" id="pro-bar">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 88%;"></div>
+            </div>
+            <p style="font-size: 15px">Css</p>
+            <div class="progress" style="height: 5px" id="pro-bar">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 92%;"></div>
+            </div> 
+            <p style="font-size: 15px">Bootstrap</p>
+            <div class="progress" style="height: 5px" id="pro-bar">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
+
+            </div>         
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+
+
+
+<!-- ======
+      EDUCATION
+      ======= -->
+<div class="container">
+
+  <div class="card" style="border: 0px;">
+       <h3 class="card-title" id="edu-hed">
+          Education
+        </h3>
+  </div>
+
+
+<div class="card-deck" >
+  <div class="card" style="border: 0px;">
+    <div class="card-body">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img/school.png" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Satyaniketan High School</h1> 
+      <p>2010</p>
+      <p>63%</p> 
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="card" style="border: 0px;">
+    <div class="card-body">
+     <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img/dip.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Govt Polytechnic College</h1> 
+      <p>2014</p> 
+      <p>65%</p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="card" style="border: 0px;">
+  
+    <div class="card-body">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img/graduation.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Bheemanna Khandre Institute of Technology</h1> 
+      <p>2017</p> 
+      <p>60%</p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<!-- =======
+      PROJECTS
+    ======== -->
+
+
+    <div class="container my-5">
+      <div class="card" id="projects">
+        <div class="card-header">
+            <h2 style="font-family: 'Montserrat Alternates', sans-serif;">PROJECTS</h2>
+        </div>
+      <div class="card-body">
+          <h5 class="card-title">Banking Application v-1</h5>  
+          <p> An interactive Console application which works  like an ATM, having a  saving and current account also help user to deposit or withdraw money </p>    
+          <a href="https://github.com/NikheelTalwade/Banking_Application_v1" class="btn btn-success">launch</a>
+     </div>
+
+     <div class="card-body">
+          <h5 class="card-title">Banking Application v-2</h5>
+          <p>A more updated version of previous one (Banking Application v-1) with some addded features</p>      
+          <a href="https://github.com/NikheelTalwade/Banking_Application_v1/releases/tag/version-2.0" class="btn btn-success">launch</a>
+     </div>
+
+     <div class="card-body">
+          <h5 class="card-title">Electricity Bill Generator</h5>
+          <p>Dedicated Console application helps you to understand how bill generation works </p>
+          <a href="https://github.com/NikheelTalwade/Electricity_Bill_Generator" class="btn btn-success">launch</a>
+     </div>
+    
+    <div class="card-body">
+          <h5 class="card-title">Shopping Cart</h5>
+          <p>An Command Line Interface(console) application which show how items will be added in Cart</p>
+          <a href="#https://github.com/NikheelTalwade/Shopping_Cart" class="btn btn-success">launch</a>
+     </div>
+      <div class="card-body">
+          <h5 class="card-title">Portfolio</h5>
+          <p>An Interactive portfolio created using HTML,CSS,Bootsrap</p>
+          <a href="file:///C:/Nikheel/Java/Projects/Portfolio/index.html#" class="btn btn-success">launch</a>
+     </div>
+
+     </div>
+    </div>
+  </div>
+    </div>
+</body>
+</html>
