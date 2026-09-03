@@ -2,13 +2,13 @@
   color-scheme: dark;
   --accent-primary: #dd0031;
   --accent-secondary: #1976d2;
-  --bg-primary: #050612;
-  --surface-1: rgba(8, 14, 28, 0.88);
-  --surface-2: rgba(14, 22, 38, 0.96);
+  --bg-primary: #060816;
+  --surface-1: rgba(10, 16, 31, 0.86);
+  --surface-2: rgba(16, 24, 45, 0.95);
   --text-primary: #f5f7ff;
   --text-secondary: #aab4ca;
-  --border-color: rgba(255, 255, 255, 0.10);
-  --shadow-soft: 0 28px 70px rgba(0, 0, 0, 0.36);
+  --border-color: rgba(255, 255, 255, 0.12);
+  --shadow-soft: 0 20px 55px rgba(0, 0, 0, 0.24);
 }
 
 :root[data-theme='light'] {
@@ -31,9 +31,8 @@ body {
   min-height: 100vh;
   font-family: Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(221, 0, 49, 0.28), transparent 32%),
-    radial-gradient(circle at bottom right, rgba(25, 118, 210, 0.12), transparent 28%),
-    linear-gradient(135deg, rgba(25, 118, 210, 0.08), rgba(0,0,0,0.02)),
+    radial-gradient(circle at top left, rgba(221, 0, 49, 0.25), transparent 30%),
+    linear-gradient(135deg, rgba(25, 118, 210, 0.12), transparent 45%),
     var(--bg-primary);
   color: var(--text-primary);
   transition: background 0.3s ease, color 0.3s ease;
@@ -59,9 +58,9 @@ button, input, textarea { font: inherit; }
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 40px 85px rgba(0, 0, 0, 0.45);
-  border-color: color-mix(in srgb, var(--accent-primary) 32%, var(--border-color));
+  transform: translateY(-4px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.24);
+  border-color: color-mix(in srgb, var(--accent-primary) 30%, var(--border-color));
 }
 
 section { margin-bottom: 2rem; }
