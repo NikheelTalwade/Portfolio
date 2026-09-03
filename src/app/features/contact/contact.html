@@ -1,0 +1,48 @@
+<section class="card contact-grid">
+  <div>
+    <app-section-header
+      eyebrow="Contact"
+      title="Let’s build something meaningful"
+      description="I am open to product, engineering, and consulting opportunities that value quality and execution."
+    />
+
+    <form [formGroup]="contactForm" (ngSubmit)="submitForm()" novalidate>
+      <label for="name">Name</label>
+      <input id="name" formControlName="name" type="text" />
+      @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+        <p class="error">Name is required.</p>
+      }
+
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" type="email" />
+      @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+        <p class="error">Please enter a valid email.</p>
+      }
+
+      <label for="subject">Subject</label>
+      <input id="subject" formControlName="subject" type="text" />
+      @if (contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched) {
+        <p class="error">Subject is required.</p>
+      }
+
+      <label for="message">Message</label>
+      <textarea id="message" formControlName="message" rows="6"></textarea>
+      @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+        <p class="error">Message is required.</p>
+      }
+
+      <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Send Message</button>
+    </form>
+
+    @if (submitted()) {
+      <p class="success" role="status">Thanks! Your message was received.</p>
+    }
+  </div>
+
+  <div class="contact-card">
+    <h3>Get in touch</h3>
+    <p>{{ profile.email }}</p>
+    <p>{{ profile.phone }}</p>
+    <p>{{ profile.location }}</p>
+  </div>
+</section>

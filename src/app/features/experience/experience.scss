@@ -1,0 +1,119 @@
+.timeline {
+  display: grid;
+  gap: 1rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0.2rem;
+  bottom: 0.2rem;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-primary), var(--border-color));
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1rem minmax(0, 1fr);
+  gap: 0.8rem;
+  align-items: start;
+}
+
+.timeline-marker {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  margin-top: 0.45rem;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-primary) 16%, transparent);
+  flex-shrink: 0;
+}
+
+.timeline-content {
+  min-width: 0;
+  background: var(--surface-2);
+  border: 1px solid var(--border-color);
+  border-radius: 1.25rem;
+  padding: 1rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(4px);
+  border-color: color-mix(in srgb, var(--accent-primary) 30%, var(--border-color));
+}
+
+.timeline-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.timeline-top h3 {
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+.timeline-top span {
+  color: var(--accent-secondary);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.company {
+  color: var(--accent-secondary);
+  font-weight: 700;
+  margin: 0.4rem 0 0.65rem;
+}
+
+.summary {
+  color: var(--text-secondary);
+  margin: 0 0 0.7rem;
+  line-height: 1.7;
+  word-break: break-word;
+}
+
+ul {
+  color: var(--text-secondary);
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.4rem;
+  line-height: 1.6;
+  margin: 0 0 0.75rem;
+}
+
+li {
+  overflow-wrap: anywhere;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-stack span {
+  background: color-mix(in srgb, var(--accent-primary) 15%, transparent);
+  color: var(--accent-primary);
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 640px) {
+  .timeline {
+    padding-left: 0.7rem;
+  }
+
+  .timeline-content {
+    padding: 0.9rem;
+  }
+}

@@ -1,0 +1,27 @@
+<section class="card">
+  <app-section-header
+    eyebrow="Skills"
+    title="Core strengths"
+    description="A modern toolkit for delivering ambitious digital products."
+  />
+
+  <div class="skill-groups">
+    @for (group of skillCategories; track group.title) {
+      <article class="skill-group">
+        <h3>{{ group.title }}</h3>
+        <div class="skill-list">
+          @for (skill of group.skills; track skill.name) {
+            <div class="skill-item">
+              <div class="skill-label">
+                <span>{{ skill.name }}</span>
+                <span>{{ skill.level }}%</span>
+              </div>
+              <app-skill-bar [label]="skill.name" [level]="skill.level"></app-skill-bar>
+              <p>{{ skill.description }}</p>
+            </div>
+          }
+        </div>
+      </article>
+    }
+  </div>
+</section>
