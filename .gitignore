@@ -73,3 +73,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 >>>>>>> origin/main
+
+# Local Netlify folder
+.netlify
