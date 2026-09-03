@@ -29,15 +29,18 @@ import { SectionHeaderComponent } from '../../shared/components/section-header/s
       <div class="hero-panel" aria-label="Professional highlights">
         <div class="profile-card">
           <div class="profile-carousel">
-            <div class="carousel-images">
-              @for (image of profile.profileImages; track image) {
-                <img
-                  class="profile-image"
-                  [src]="image"
-                  [alt]="'Portrait of ' + profile.name"
-                  [class.active]="currentProfileImage() === image"
-                />
-              }
+            <div class="profile-image-frame">
+              <div class="carousel-images">
+                @for (image of profile.profileImages; track image) {
+                  <img
+                    class="profile-image"
+                    [src]="image"
+                    [alt]="'Portrait of ' + profile.name"
+                    [class.active]="currentProfileImage() === image"
+                  />
+                }
+              </div>
+            </div>
             </div>
             <div class="carousel-controls">
               <button type="button" class="carousel-btn" (click)="prevImage()" aria-label="Previous profile photo">‹</button>
@@ -78,7 +81,7 @@ import { SectionHeaderComponent } from '../../shared/components/section-header/s
     </section>
   `,
   styles: `
-    .hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr); gap: 1.5rem; padding: 2rem; position: relative; overflow: hidden; align-items: center; animation: fadeInUp 0.6s ease both; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.6fr); gap: 2rem; padding: 2.4rem; position: relative; overflow: hidden; align-items: center; animation: fadeInUp 0.6s ease both; }
     .hero::after { content: ''; position: absolute; inset: auto -20% -20% auto; width: 280px; height: 280px; background: radial-gradient(circle, color-mix(in srgb, var(--accent-primary) 20%, transparent) 0%, transparent 70%); pointer-events: none; }
     .hero-copy, .hero-panel { display: flex; flex-direction: column; justify-content: center; }
     .eyebrow { color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.8rem; font-weight: 700; }
@@ -94,10 +97,11 @@ import { SectionHeaderComponent } from '../../shared/components/section-header/s
     .social-links a { color: var(--accent-secondary); text-decoration: none; font-weight: 600; }
     .hero-panel { display: grid; gap: 1rem; }
     .profile-card, .profile-highlights, .feature-card { background: var(--surface-2); border: 1px solid var(--border-color); border-radius: 1.25rem; padding: 1.25rem; box-shadow: var(--shadow-soft); }
-    .profile-card { display: grid; gap: 1rem; width: min(100%, 320px); margin: 0 auto; }
+    .profile-card { display: grid; gap: 1rem; width: min(100%, 360px); margin: 0 auto; padding: 1.4rem; }
     .profile-carousel { display: grid; gap: 0.85rem; }
     .carousel-images { position: relative; }
-    .profile-image { width: 100%; aspect-ratio: 3 / 4; border-radius: 1rem; object-fit: cover; margin: 0 auto; display: none; }
+    .profile-image-frame { background: white; padding: 1rem; border-radius: 1rem; box-shadow: 0 20px 50px rgba(0,0,0,0.35); display: block; }
+    .profile-image { width: 100%; aspect-ratio: 3 / 4; border-radius: 0.9rem; object-fit: cover; margin: 0 auto; display: none; }
     .profile-image.active { display: block; }
     .carousel-controls { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
     .carousel-indicator { color: var(--text-secondary); font-size: 0.95rem; }
