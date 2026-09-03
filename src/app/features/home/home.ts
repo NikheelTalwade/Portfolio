@@ -29,16 +29,11 @@ import { SectionHeaderComponent } from '../../shared/components/section-header/s
       <div class="hero-panel" aria-label="Professional highlights">
         <div class="profile-card">
           <div class="profile-carousel">
-            <div class="carousel-images">
-              @for (image of profile.profileImages; track image) {
-                <img
-                  class="profile-image"
-                  [src]="image"
-                  [alt]="'Portrait of ' + profile.name"
-                  [class.active]="currentProfileImage() === image"
-                />
-              }
-            </div>
+            <img
+              class="profile-image"
+              [src]="currentProfileImage()"
+              [alt]="'Portrait of ' + profile.name"
+            />
             <div class="carousel-controls">
               <button type="button" class="carousel-btn" (click)="prevImage()" aria-label="Previous profile photo">‹</button>
               <span class="carousel-indicator">{{ currentImageIndex() + 1 }} / {{ profile.profileImages.length }}</span>
@@ -96,9 +91,7 @@ import { SectionHeaderComponent } from '../../shared/components/section-header/s
     .profile-card, .profile-highlights, .feature-card { background: var(--surface-2); border: 1px solid var(--border-color); border-radius: 1.25rem; padding: 1.25rem; box-shadow: var(--shadow-soft); }
     .profile-card { display: grid; gap: 1rem; width: min(100%, 320px); margin: 0 auto; }
     .profile-carousel { display: grid; gap: 0.85rem; }
-    .carousel-images { position: relative; }
-    .profile-image { width: 100%; aspect-ratio: 3 / 4; border-radius: 1rem; object-fit: cover; margin: 0 auto; display: none; }
-    .profile-image.active { display: block; }
+    .profile-image { width: 100%; aspect-ratio: 3 / 4; border-radius: 1rem; object-fit: cover; margin: 0 auto; }
     .carousel-controls { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
     .carousel-indicator { color: var(--text-secondary); font-size: 0.95rem; }
     .carousel-btn { width: 2.5rem; height: 2.5rem; border-radius: 999px; border: 1px solid var(--border-color); background: color-mix(in srgb, var(--surface-1) 85%, transparent); color: var(--text-primary); font-size: 1.25rem; cursor: pointer; transition: all 0.2s ease; }
